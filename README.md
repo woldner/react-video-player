@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1. The video will start on page load; but muted. Thus, you have to manually enable sound.
 2. The video is looped.
-3. Clicking a poster will only start the video if it's source differs from whats already loaded. Clicking the poster again will NOT pause the video if it's currently playing.
+3. Clicking a poster will only start the video if its source differs from whats already loaded. Clicking the poster again will NOT pause the video if it's currently playing.
 4. Flaw: The tooltip is confined to the window (horizontally) but can grow extremely tall.
 
 ## Development
