@@ -1,14 +1,13 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.main`
-  background-color: #282c34;
   padding: 16px;
   text-align: center;
 `
 
 export const Container = styled.div`
   align-items: center;
-  color: white;
+  color: black;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
@@ -17,6 +16,6 @@ export const Container = styled.div`
 `
 
 export const Section = styled.section`
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
 `

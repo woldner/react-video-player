@@ -2,21 +2,21 @@ import { useRef, useEffect } from "react"
 import { Video } from "./styled"
 
 const Player = ({ url }) => {
-  const video = useRef()
-  const previousUrl = useRef(url)
+  const videoRef = useRef(null)
+  const urlRef = useRef(url)
 
   useEffect(() => {
-    if (previousUrl.current !== url) {
-      if (video.current) {
-        video.current.load()
+    if (urlRef.current !== url) {
+      if (videoRef.current) {
+        videoRef.current.load()
       }
 
-      previousUrl.current = url
+      urlRef.current = url
     }
   }, [url])
 
   return (
-    <Video controls ref={video}>
+    <Video controls ref={videoRef}>
       <source src={url} type="video/mp4" />
     </Video>
   )
