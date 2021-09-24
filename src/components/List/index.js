@@ -1,5 +1,5 @@
-import Item from "../Item"
 import { Grid } from "./styled"
+import Item from "../Item"
 
 const List = ({ items, clickHandler }) => {
   return (
