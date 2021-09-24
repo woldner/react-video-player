@@ -1,11 +1,14 @@
-import { Button, Poster } from "./styled"
+import Tooltip from "react-float-tooltip"
+import { Button, Poster, TooltipContainer, Title } from "./styled"
 
 const Item = ({ data, clickHandler }) => {
   return (
-    <Button onClick={() => clickHandler(data.video)}>
-      <Poster src={data.image} alt={data.name} />
-      <h3>{data.name}</h3>
-    </Button>
+    <Tooltip isRevert tooltipElement={() => <TooltipContainer>{data.description}</TooltipContainer>}>
+      <Button onClick={() => clickHandler(data.video)}>
+        <Poster src={data.image} alt={data.name} />
+        <Title>{data.name}</Title>
+      </Button>
+    </Tooltip>
   )
 }
 
