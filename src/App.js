@@ -1,7 +1,5 @@
 import Main from "./containers/Main"
 
-const App = () => {
-  return <Main />
-}
+const App = () => <Main />
 
 export default App
