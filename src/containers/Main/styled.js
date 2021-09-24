@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const Wrapper = styled.main`
   background-color: #282c34;
+  color: white;
   text-align: center;
 `
 
@@ -19,4 +20,8 @@ export const Section = styled.section`
   margin: 16px 0;
   max-width: 1000px;
   width: 100%;
+`
+
+export const Header = styled.h1`
+  margin: 0;
 `

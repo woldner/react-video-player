@@ -3,7 +3,7 @@ import { Button, Poster, TooltipContainer, Title } from "./styled"
 
 const Item = ({ data, clickHandler }) => {
   return (
-    <Tooltip isRevert tooltipElement={() => <TooltipContainer>{data.description}</TooltipContainer>}>
+    <Tooltip tooltipElement={() => <TooltipContainer>{data.description}</TooltipContainer>}>
       <Button onClick={() => clickHandler(data.video)}>
         <Poster src={data.image} alt={data.name} />
         <Title>{data.name}</Title>

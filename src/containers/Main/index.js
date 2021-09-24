@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Wrapper, Container, Section } from "./styled"
+import { Wrapper, Container, Section, Header } from "./styled"
 import Player from "../../components/Player"
 import List from "../../components/List"
 import data from "../../assets/data"
@@ -14,6 +14,10 @@ const Main = () => {
   return (
     <Wrapper>
       <Container>
+        <Section>
+          <Header>React.js Video player demo</Header>
+        </Section>
+
         <Section>
           <Player url={url} />
         </Section>
