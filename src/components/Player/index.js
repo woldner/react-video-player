@@ -9,6 +9,7 @@ const Player = ({ url }) => {
     if (urlRef.current !== url) {
       if (videoRef.current) {
         videoRef.current.load()
+        videoRef.current.play()
       }
 
       urlRef.current = url
