@@ -7,8 +7,8 @@ import data from "../../assets/data"
 const Main = () => {
   const [url, setUrl] = useState(data[0].video)
 
-  const handleClick = (url) => {
-    setUrl(url)
+  const handleClick = (value) => {
+    setUrl(value)
   }
 
   return (
