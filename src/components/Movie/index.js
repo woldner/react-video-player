@@ -4,11 +4,19 @@ import Tooltip from "react-float-tooltip"
 import { Button, Poster, TooltipContainer, Title } from "./styled"
 
 const Movie = ({ data: { description, video, image, name } }) => {
-  const { handleClick } = useContext(VideoContext)
+  const { clickHandler } = useContext(VideoContext)
+
+  const createTooltip = () => {
+    return <TooltipContainer>{description}</TooltipContainer>
+  }
+
+  const handleClick = () => {
+    clickHandler(video)
+  }
 
   return (
-    <Tooltip tooltipElement={() => <TooltipContainer>{description}</TooltipContainer>}>
-      <Button onClick={() => handleClick(video)}>
+    <Tooltip tooltipElement={createTooltip}>
+      <Button onClick={handleClick}>
         <Poster src={image} alt={name} />
         <Title>{name}</Title>
       </Button>

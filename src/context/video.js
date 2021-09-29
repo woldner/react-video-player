@@ -6,14 +6,14 @@ export const VideoContext = React.createContext(null)
 export const VideoContextProvider = ({ children }) => {
   const [src, setSrc] = useState(() => data[0].video)
 
-  const handleClick = (value) => {
+  const clickHandler = (value) => {
     setSrc(value)
   }
 
   const context = {
     data,
     src,
-    handleClick,
+    clickHandler,
   }
 
   return (
