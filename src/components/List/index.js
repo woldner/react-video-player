@@ -1,11 +1,15 @@
+import { useContext } from "react"
+import { VideoContext } from "../../context/video"
 import { Grid } from "./styled"
-import Item from "../Item"
+import Movie from "../Movie"
 
-const List = ({ items, clickHandler }) => {
+const List = () => {
+  const { data } = useContext(VideoContext)
+
   return (
     <Grid>
-      {items.map((item, index) => (
-        <Item key={index} data={item} clickHandler={clickHandler} />
+      {data.map((item, index) => (
+        <Movie key={index} data={item} />
       ))}
     </Grid>
   )

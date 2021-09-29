@@ -1,16 +1,8 @@
-import { useState } from "react"
-import { Wrapper, Container, Section, Header } from "./styled"
 import Player from "../../components/Player"
 import List from "../../components/List"
-import data from "../../assets/data"
+import { Wrapper, Container, Section, Header } from "./styled"
 
 const Main = () => {
-  const [url, setUrl] = useState(data[0].video)
-
-  const handleClick = (value) => {
-    setUrl(value)
-  }
-
   return (
     <Wrapper>
       <Container>
@@ -19,11 +11,11 @@ const Main = () => {
         </Section>
 
         <Section>
-          <Player url={url} />
+          <Player />
         </Section>
 
         <Section>
-          <List items={data} clickHandler={handleClick} />
+          <List />
         </Section>
       </Container>
     </Wrapper>
