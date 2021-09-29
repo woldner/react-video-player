@@ -1,12 +1,15 @@
-import { useRef, useEffect } from "react"
+import { useContext, useEffect, useRef } from "react"
+import { VideoContext } from "../../context/video"
 import { Video } from "./styled"
 
-const Player = ({ url }) => {
+const Player = () => {
+  const { src } = useContext(VideoContext)
+
   const videoRef = useRef(null)
-  const urlRef = useRef(url)
+  const srcRef = useRef(src)
 
   useEffect(() => {
-    if (urlRef.current === url) {
+    if (srcRef.current === src) {
       return
     }
 
@@ -15,12 +18,12 @@ const Player = ({ url }) => {
       videoRef.current.play()
     }
 
-    urlRef.current = url
-  }, [url])
+    srcRef.current = src
+  }, [src])
 
   return (
     <Video controls autoPlay muted loop ref={videoRef}>
-      <source src={url} type="video/mp4" />
+      <source src={src} type="video/mp4" />
     </Video>
   )
 }
