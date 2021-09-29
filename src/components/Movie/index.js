@@ -3,7 +3,7 @@ import { VideoContext } from "../../context/video"
 import Tooltip from "react-float-tooltip"
 import { Button, Poster, TooltipContainer, Title } from "./styled"
 
-const Movie = ({ data: { description, video, image, name } }) => {
+const Movie = ({ item: { description, video, image, name } }) => {
   const { clickHandler } = useContext(VideoContext)
 
   const createTooltip = () => {

@@ -4,12 +4,12 @@ import { Grid } from "./styled"
 import Movie from "../Movie"
 
 const List = () => {
-  const { data } = useContext(VideoContext)
+  const { items } = useContext(VideoContext)
 
   return (
     <Grid>
-      {data.map((item, index) => (
-        <Movie key={index} data={item} />
+      {items.map((data, index) => (
+        <Movie key={index} item={data} />
       ))}
     </Grid>
   )
